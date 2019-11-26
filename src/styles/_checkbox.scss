@@ -1,0 +1,43 @@
+$main-color: #3498db;
+
+.checkbox {
+  display: block;
+  position: relative;
+
+  // width: 100%;
+  padding-left: 2rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  span {
+    position: absolute;
+    margin: auto 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: #ffffff00;
+    border: $main-color 3px solid;
+    border-radius: 0.25rem;
+  }
+
+  input:checked ~ span {
+    transition: background ease 200ms;
+    background: $main-color url("../svg/done.svg") no-repeat;
+    background-size: cover;
+  }
+  h4.done {
+    text-decoration: line-through;
+    color: #7C7C7C;
+  }
+}

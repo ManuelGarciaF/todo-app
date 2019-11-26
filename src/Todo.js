@@ -1,14 +1,13 @@
 const TodoFactory = ({
   title = "untitled",
   description = "",
-  dueDate,
+  dueDate = "",
   priority = 0,
   projectId
 } = {}) => ({
   title,
   description,
   dueDate,
-  creationDate: new Date(),
   priority,
   projectId,
   completed: false

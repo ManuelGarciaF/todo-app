@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Todo App</title>
 </head>
+
 <body>
+  <div id="side-bar">
+    <h2>Projects</h2>
+    <ul id="project-list">
+      <li class="selected">Project 1</li>
+      <li>Project 2</li>
+      <li>Project 3</li>
+      <li>Project 4</li>
+      <li>Project 5</li>
+    </ul>
+    <div class="flex-bottom">
+      <div class="input-box">
+        <input type="text" name="project-title" id="project-title-input" placeholder="New project">
+        <img src="svg/add_circle.svg" alt="ok">
+      </div>
+    </div>
+  </div>
+  <div id="project-card" class="card">
+    <div id="project-title">
+      <h3 id="project-name">Project 1</h3>
+      <button><img src="svg/delete.svg" alt="Delete"></button>
+    </div>
+    <ul id="todo-list">
+      <li>
+        <div class="top-bar">
+          <label class="checkbox">
+            <input type="checkbox">
+            <span></span>
+            <h4>Todo 1</h4>
+          </label>
+        </div>
+        <div class="description">
+          <p>Fugiat non esse culpa sit labore exercitation consectetur in laboris.</p>
+          <p>Due 22/12/2019</p>
+        </div>
+      </li>
+      <li>
+        <div class="top-bar">
+          <label class="checkbox">
+            <input type="checkbox">
+            <span></span>
+            <h4 class="done">Todo 2</h4>
+          </label>
+          <img src="svg/clear.svg" alt="clear">
+        </div>
+        <div class="description"></div>
+      </li>
+    </ul>
+  </div>
+  <div id="new-item-card" class="card">
+    <h3 id="new-todo-card">New Item</h3>
+    <div class="input-box">
+      <input type="text" id="new-todo-title" placeholder="Title">
+    </div>
+    <div class="input-box">
+      <textarea id="new-todo-description" cols="20" rows="5" placeholder="Description"></textarea>
+    </div>
+    <div class="input-box">
+      <input type="text" placeholder="Date Due dd/mm/yyyy">
+    </div>
+    <button id="new-todo-submit">Create</button>
+  </div>
 </body>
+
 </html>
