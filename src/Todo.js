@@ -1,16 +1,8 @@
-const TodoFactory = ({
-  title = "untitled",
-  description = "",
-  dueDate = "",
-  priority = 0,
-  projectId
-} = {}) => ({
+const TodoFactory = (title = "untitled", description = "", dateDue) => ({
   title,
   description,
-  dueDate,
-  priority,
-  projectId,
+  dateDue,
   completed: false
-})
+});
 
 export default TodoFactory;

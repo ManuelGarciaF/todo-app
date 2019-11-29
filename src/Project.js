@@ -1,4 +1,4 @@
-const ProjectFactory = (title = "") => ({
+const ProjectFactory = (title = "Unnamed Project") => ({
   type: "project",
   title,
   todos: []
