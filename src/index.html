@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+
+
   <title>Todo App</title>
 </head>
 
@@ -14,7 +24,7 @@
     <ul id="project-list"></ul>
     <div class="flex-bottom">
       <div class="input-box">
-        <input type="text" name="project-title" id="project-title-input" placeholder="New project">
+        <input type="text" name="project-title" id="project-title-input" placeholder="New project" maxlength="32">
         <img src="svg/add_circle.svg" alt="ok" id="project-title-submit">
       </div>
     </div>
@@ -22,20 +32,23 @@
   <div id="project-card" class="card">
     <div id="project-title">
       <h3 id="project-name"></h3>
-      <button><img src="svg/delete.svg" alt="Delete"></button>
+      <button id="delete-project"><img src="svg/delete.svg" alt="Delete"></button>
     </div>
     <ul id="todo-list"></ul>
   </div>
   <div id="new-item-card" class="card">
-    <h3 id="new-todo-card">New Item</h3>
+    <h3>New Item</h3>
     <div class="input-box">
       <input type="text" id="new-todo-title" placeholder="Title">
     </div>
     <div class="input-box">
       <textarea id="new-todo-description" cols="20" rows="5" placeholder="Description"></textarea>
     </div>
+    <div id="date-error" class="error" style="display: none;">Invalid Date, Please try again.</div>
     <div class="input-box">
-      <input type="text" placeholder="Date Due dd/mm/yyyy">
+      <span class="input-text">Date Due</span>
+      <input type="text" id="new-todo-date" placeholder="dd/mm/yyyy">
+      <img class="input-icon" src="svg/date.svg" alt="">
     </div>
     <button id="new-todo-submit">Create</button>
   </div>

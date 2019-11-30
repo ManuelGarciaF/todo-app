@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:300,500,700&display=swap");
 
 $main-color: #3498db;
+$error-color: #e74c3c;
 
 %line-separated {
   padding-bottom: 0.75rem;
@@ -104,6 +105,11 @@ ul {
   &:hover {
     overflow: auto;
   }
+}
+
+.error {
+  transition: all ease 2000ms;
+  color: $error-color;
 }
 
 #side-bar {
