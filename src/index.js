@@ -37,12 +37,12 @@ function renderProjectList(projects) {
     li.innerHTML = project.title;
     projectList.appendChild(li);
 
-    li.addEventListener("click", event => {
+    li.addEventListener("click", () => {
       setCurrentProject(projects.indexOf(project));
       renderCurrentProject(currentProject);
     });
   });
-  setCurrentProject(projects.indexOf(currentProject))
+  setCurrentProject(projects.indexOf(currentProject));
 }
 
 function renderCurrentProject(project) {
@@ -79,7 +79,7 @@ function renderCurrentProject(project) {
       saveProjects();
     });
 
-    const span = appendElement(label, "span");
+    appendElement(label, "span");
     const todoTitle = appendElement(
       label,
       "h4",
@@ -92,7 +92,7 @@ function renderCurrentProject(project) {
         src: "clear.svg",
         alt: "clear"
       });
-      clearIcon.addEventListener("click", event => {
+      clearIcon.addEventListener("click", () => {
         project.todos.splice(index, 1);
 
         // Reload project.
@@ -122,7 +122,7 @@ if (!projects) projects = [ProjectFactory("Default Project")];
 let currentProject = projects[0];
 
 // Remove current project logic.
-document.getElementById("delete-project").addEventListener("click", event => {
+document.getElementById("delete-project").addEventListener("click", () => {
   projects.splice(projects.indexOf(currentProject), 1);
 
   // Set currentProject to the next first project or create a new one.
